@@ -1,393 +1,233 @@
- <!-- FlatFy Theme - Andrea Galanti /-->
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+<!DOCTYPE html>
+<html>
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-    <meta name="description" content="Flatfy Free Flat and Responsive HTML5 Template ">
-    <meta name="author" content="">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <script type="text/javascript" src="/static/pixi.min.js"></script>
+  <script type="text/javascript" src="/static/main.js"></script>
+  <link rel="stylesheet" href="/static/font.css">
+  <title>AdmieWang website</title>
+  <!-- 其他现有代码保持不变 -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- 新增ICO图标配置 -->
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <!-- 其他现有代码 -->
+  <style>
+    canvas {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -2;
+      pointer-events: none
+    }
+a:hover,
+a:link,
+a:visited,
+a:active,
+a:focus {
+    text-decoration: none;
+   
+}
 
-    <title>Admie Wang</title>
+button,
+input,
+input:focus {
+    outline: none;
+    border: none;
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
- 
-    <!-- Custom Google Web Font -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.useso.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
-	
-    <!-- Custom CSS-->
-    <link href="css/general.css" rel="stylesheet">
-	
-	 <!-- Owl-Carousel -->
-    <link href="css/custom.css" rel="stylesheet">
-	<link href="css/owl.carousel.css" rel="stylesheet">
-    <link href="css/owl.theme.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
-	<link href="css/animate.css" rel="stylesheet">
-	
-	<!-- Magnific Popup core CSS file -->
-	<link rel="stylesheet" href="css/magnific-popup.css"> 
-	
-	<script src="js/modernizr-2.6.2.min.js"></script>  <!-- Modernizr /-->
-	<script src="js/PIE_IE9.js"></script>  
-	<script src="js/PIE_IE678.js"></script>  
-	
-	<!--[if lt IE 9]>
-		<script src="js/html5shiv.js"></script>
-	<![endif]-->
-	<link rel="shortcut icon" href="img/favicon.ico"/>
+}
+
+a,
+button,
+input {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+*{
+
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* 其他浏览器 */
+}
+
+    * {
+      box-sizing: border-box;
+      -webkit-text-size-adjust: none
+    }
+
+    img {
+      border: 0;
+      vertical-align: middle
+    }
+
+
+    body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: radial-gradient(#619bff, #e0e0e3);
+}
+
+    .main {
+      width: 35%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media screen and (max-width:1024px) {
+      .main {
+        width: 45%;
+      }
+    }
+
+    @media screen and (max-width:768px) {
+      .main {
+        width: 50%;
+      }
+    }
+
+    @media screen and (max-width:540px) {
+      .main {
+        width: 60% !important;
+      }
+    }
+
+    @media screen and (max-width:480px) {
+      .main {
+        width: 90% !important;
+      }
+    }
+
+    @media screen and (max-width:360px) {
+      .main {
+        width: 100% !important;
+      }
+    }
+
+
+    img {
+      border: 3px solid rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      box-shadow:0 0px 20px 5px #e6e8ea;
+      transition: .4s ease-in-out;
+    }
+
+    h1 {
+
+  font-family: 'Noto Serif SC', serif;
+      color: #fff;
+      font-size: 1.8rem;
+      line-height: 2em;
+      font-weight: 800;
+    }
+
+    h2 {
+      margin: 0;
+      color: #ffffffa3;
+      padding-bottom: 45px;
+      font-size: 18px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      position: relative;
+      list-style-type: none;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      width: 100%;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      border-bottom: 2px solid hsla(0, 0%, 100%, .1);
+      border-top: 2px solid hsla(0, 0%, 100%, .1);
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 85%
+    }
+
+    li {
+      display: flex;
+      transition: all .2s;
+      width: 100%;
+      border-left: 1px solid hsla(0, 0%, 100%, .1);
+      border-right: 1px solid hsla(0, 0%, 100%, .1);
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    a {
+      font-size: 1.2rem;
+      color: #ffffff;
+      transition: all .2s;
+     
+      cursor: pointer;
+    }
+
+    a:hover {
+      color: #fff !important;
+       text-shadow:0 0px 20px  #ffffff;
+    }
+  </style>
 </head>
 
-<body id="home">
+<body>
 
-	<!-- Preloader -->
-	<div id="preloader">
-		<div id="status"></div>
-	</div>
-	
-	<!-- FullScreen -->
-    <div class="intro-header">
-		<div class="col-xs-12 text-center abcen1">
-			<img class="rotate" src="img/libai.png" alt="Generic placeholder image">
-			<h1 class="h1_home wow fadeIn" data-wow-delay="0.4s">Admie Wang</h1>
-			<h3 class="h3_home wow fadeIn" data-wow-delay="0.6s"></h3>
-			<ul class="list-inline intro-social-buttons">
-				<li><a href="https://space.bilibili.com/1570747386?spm_id_from=..0.0" target="_blank" class="btn  btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">Bilibili</span></a>
-				</li>
-				<li><a href="https://www.coolapk.com/u/5041966" target="_blank" class="btn  btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">酷安</span></a>
-				</li>
-				<li id="download" ><a href="#downloadlink" target="_blank" class="btn  btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">QQ群</span></a>
-				</li>
-			</ul>
-		</div>    
-        <!-- /.container -->
-		<div class="col-xs-12 text-center abcen wow fadeIn">
-			<div class="button_down "> 
-				<a class="imgcircle wow bounceInUp" data-wow-duration="1.5s"  href="#whatis"> <img class="img_scroll" src="img/icon/circle.png" alt=""> </a>
-			</div>
-		</div>
-    </div>
-	
-	<!-- NavBar-->
-	<nav class="navbar-default" role="navigation">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#home">Admie Wang</a>
-			</div>
 
-			<div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
-				<ul class="nav navbar-nav">
-					
-					<li class="menuItem"><a href="#ser">服务</a></li>
-					<li class="menuItem"><a href="#mi8flyme">Flyme10</a></li>
-					<li class="menuItem"><a href="#mi8origin">OriginOcean</a></li>
-					<li class="menuItem"><a href="#downloadlink">QQ群</a></li>
-					<li class="menuItem"><a href="#contact">友情链接</a></li>
-				</ul>
-			</div>
-		   
-		</div>
-	</nav> 
-	<div class="copyrights">Collect from <a href="https://www.webmoban.net" >手机网站模板</a></div>
-	
-	<!-- Credits -->
-	<div id="ser" class="content-section-a">
-		<div class="container">
-			<div class="row">
-			
-			<div class="col-md-6 col-md-offset-3 text-center wrap_title">
-				<h2>服务</h2>
-			 </div>
-			 
-				<div class="col-sm-6  block wow bounceIn">
-					<div class="row">
-						<div class="col-md-4 box-icon rotate"> 
-							<i class="fa fa-desktop fa-4x "> </i> 
-						</div>
-						<div class="col-md-8 box-ct">
-							<h3> 电脑重装系统 </h3>
-							<p> 支持除Mac外任何电脑设备重装Windows系统 </p>
-						</div>
-				  </div>
-			  </div>
-			  <div class="col-sm-6 block wow bounceIn">
-					<div class="row">
-					  <div class="col-md-4 box-icon rotate"> 
-						<i class="fa fa-picture-o fa-4x "> </i> 
-					  </div>
-					  <div class="col-md-8 box-ct">
-						<h3> 视频剪辑 </h3>
-						<p> 支持时长小于30分钟的视频剪辑服务，价格可谈</p> 
-					  </div>
-					</div>
-			  </div>
-		  </div>
-		  
-		  <div class="row tworow">
-				<div class="col-sm-6  block wow bounceIn">
-					<div class="row">
-						<div class="col-md-4 box-icon rotate"> 
-							<i class="fa fa-magic fa-4x "> </i> 
-						</div>
-						<div class="col-md-8 box-ct">
-							<h3> PS图片处理 </h3>
-							<p> 任意尺寸图片处理，格式不限，支持抠图，AI创作等 </p>
-						</div>
-				  </div>
-			  </div>
-			  <div class="col-sm-6 block wow bounceIn">
-					<div class="row">
-					  <div class="col-md-4 box-icon rotate"> 
-						<i class="fa fa-heart fa-4x "> </i> 
-					  </div>
-					  <div class="col-md-8 box-ct">
-						<h3> 刷机服务</h3>
-						<p> 支持小米等全型号代刷。面具ROOT，KernelSU，LSP框架，救砖刷机解锁，定制系统等</p> 
-					  </div>
-					</div>
-			  </div>
-		  </div>
-		</div>
-	</div>
-	
-	
-	<!-- Use it -->
- 
+  <div class="main">
 
-    <div id ="mi8flyme" class="content-section-b"> 
-		
-		<div class="container">
-            <div class="row">
-                <div class="col-sm-6 wow fadeInLeftBig">
-                     <div id="owl-demo-1" class="owl-carousel">
-						<a href="img/flyme/1.jpg" class="image-link">
-							<div class="item">
-								<img  class="img-responsive img-rounded" src="img/flyme/1.jpg" alt="">
-							</div>
-						</a>
-						<a href="img/flyme/2.jpg" class="image-link">
-							<div class="item">
-								<img  class="img-responsive img-rounded" src="img/flyme/2.jpg" alt="">
-							</div>
-						</a>
-						<a href="img/flyme/3.jpg" class="image-link">
-							<div class="item">
-								<img  class="img-responsive img-rounded" src="img/flyme/3.jpg" alt="">
-							</div>
-						</a>
-					</div>       
-                </div>
-				
-                <div class="col-sm-6 wow fadeInRightBig"  data-animation-delay="200">   
-                    <h3 class="section-heading">Flyme10 for 小米8</h3>
-					<p class="lead">
-						v1.0</p>
-						<p class="lead">基于 魅族20</p>
-						<p class="lead">感谢 @千叶奈雪 @djfiicuv @赖儒 @trdyun @AGXMX 等</p>
-						<p class="lead">以及DNA群内各位大佬的帮助</p>
-						<p class="lead">以及热情的CoolMI群友们</p>
-						<p class="lead">---------------------</p>
-						<p class="lead">剩余bugs:</p>
-						<p class="lead">双击亮屏
-						人脸识别
-						NFC
-						色彩模式
-						状态栏
-						发热
-						快充
-						震动</p>
-					</p>
+    <img src="img/AdmieWang.jpg" width="130" height="130" alt="avatar">
+    <h1>AdmieWang</h1>
 
-					 <p><a class="btn btn-embossed btn-primary" target="_blank" href="https://www.coolapk.com/feed/46964913?shareKey=ZWIzYzZmYTA0MWYzNjRiZTNlMjE" role="button">酷安链接</a> 
-					 <a class="btn btn-embossed btn-info" target="_blank" href="https://www.123pan.com/s/0KO8Vv-4rED3.html" role="button">下载链接(zH59)</a></p>
-				</div>  			
-			</div>
-        </div>
-    </div>
-	
-	
+    <ul>
+      <li><a href="https://space.bilibili.com/1570747386"><span>哔哩哔哩</span></a></li>
+      <li><a href="mailto:2116506278@qq.com"><span>联系我</span></a></li>
+    </ul>
 
-    <div id="mi8origin" class="content-section-a">
-
-        <div class="container">
-
-             <div class="row">
-			 
-				<div class="col-sm-6 pull-right wow fadeInRightBig">
-                    <a href="img/origin/1.jpg" class="image-link">
-							<div class="item">
-								<img  class="img-responsive img-rounded" src="img/origin/1.jpg" alt="">
-							</div>
-						</a>
-						
-                </div>
-			 
-                <div class="col-sm-6 wow fadeInLeftBig"  data-animation-delay="200">   
-                    <h3 class="section-heading">OriginOcean for 小米8</h3>
-                    <p class="lead">OriginOcean for 小米8
-									by 源米科技
-									特别声明:
-									本包由 @Kkkrt 大佬制作，我负责收尾的部分工作。这里已经经过作者同意，由我代替他发布此
-									感谢无心大老 @憨憨初音酱 指导
-									本包原则上需要扩容system到5G
-									本包为体验包，并不适合日用，如果这是你的主力机，非常不建议刷入。
-									<p class="lead">已知的Bug:</p>
-									<p class="lead">流量（目前最大的Bug）</p>
-									<p class="lead">亮度（可用第三方代替）</p>
-									<p class="lead">深色模式</p>
-									<p class="lead">人脸识别</p>
-									<p class="lead">息屏显示</p>
-									<p class="lead">小窗</p>
-									<p class="lead">分享（可用第三方代替）</p>
-									<p class="lead">NFC </p>
-					</p>
-					
-					<p><a class="btn btn-embossed btn-primary" target="_blank" href="https://www.coolapk.com/feed/39178584?shareKey=NGJjZDc3ZDAwMDMzNjRiZTdiNTg" role="button">酷安链接</a> 
-					 <a class="btn btn-embossed btn-info" target="_blank" href="https://www.123pan.com/s/0KO8Vv-3KED3.html" role="button">下载链接(QrzC)</a></p>
-				
-				</div>           
-            </div>
-        </div>
-    </div>
-
-	</div>
-	
-	<div  class="content-section-c ">
-		<div class="container">
-			<div class="row">
-			<div class="col-md-6 col-md-offset-3 text-center white">
-				<h2>捐赠支持</h2>
-				<p>正在学业攀升中</p>
-				<p>感谢您的支持，您的名字将会出现在收集表中</p>
-			 </div>
-			<div class="col-md-6 col-md-offset-3 text-center">
-				<div class="mockup-content">
-						<div class="morph-button wow pulse morph-button-inflow morph-button-inflow-1">
-							<button type="button "><span>Subscribe to our Newsletter</span></button>
-							<div class="morph-content">
-								<div>
-									<div class="content-style-form content-style-form-4 ">
-										<h2 class="morph-clone">捐赠</h2>
-										<form>
-											<a href="img/jz.jpg" class="image-link">
-												<div class="item">
-													<img  class="img-responsive img-rounded" src="img/jz.jpg" alt="">
-												</div>
-											</a>
-											<p><button>捐赠后请联系我 QQ2116506278</button></p>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-				</div>
-			</div>	
-			</div>>
-		</div>
-	</div>	
-	
-	
-	
-	<!-- Banner Download -->
-	<div id="downloadlink" class="banner">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-md-offset-3 text-center wrap_title">
-				<h2>QQ群</h2>
-				<p class="lead" style="margin-top:0">因特殊原因暂时停止入群给您带来的不便敬请谅解</p>
-				<p></p> 
-			 </div>
-			</div>
-		</div>
-	</div>
-	
-	<!-- Contact -->
-	<div id="contact" class="content-section-a">
-		<div class="container">
-			<div class="row">
-			
-			<div class="col-md-6 col-md-offset-3 text-center wrap_title">
-				<h2>友情链接</h2>
-				<p class="lead" style="margin-top:0">友情+1 友情+1 友情+1 友情+1 友情+1 友情+1 ······</p>
-				<li><a href="http://dpan.com.cn" target="_blank" class="btn  btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">DPan</span></a>
-				    <a href="https://djz.icu" target="_blank" class="btn  btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">丁教主Ding的小站</span></a>
-				</li>
-			</div>
-				
-			
-		
-			</div>
-		</div>
-	</div>
-	
-	
-	
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-7">
-            <h3 class="footer-title">好耶</h3>
-            <p>不知道你们还有什么鬼点子，必须感谢丁教主Ding对本项目的支持<br/>
-            </p>
-			
-			<!-- LICENSE -->
-			<a rel="cc:attributionURL" href="https://icp.gov.moe/?keyword=20230626" target="_blank"
-		   property="dc:title">萌ICP备20230626号</a>
-		   
-	   
-          </div> <!-- /col-xs-7 -->
-
-          <div class="col-md-5">
-            <div class="footer-banner">
-              <h3 class="footer-title">Flatfy Theme</h3>
-              <ul>
-                
-              </ul>
-              More Templates <a href="https://www.webmoban.net" target="_blank" title="webmoban">webmoban</a> - Collect from <a href="https://www.webmoban.net" title="webmoban" target="_blank">webmoban</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.js"></script>
-	<script src="js/owl.carousel.js"></script>
-	<script src="js/script.js"></script>
-	<!-- StikyMenu -->
-	<script src="js/stickUp.min.js"></script>
-	<script type="text/javascript">
-	  jQuery(function($) {
-		$(document).ready( function() {
-		  $('.navbar-default').stickUp();
-		  
-		});
-	  });
-	
-	</script>
-	<!-- Smoothscroll -->
-	<script type="text/javascript" src="js/jquery.corner.js"></script> 
-	<script src="js/wow.min.js"></script>
-	<script>
-	 new WOW().init();
-	</script>
-	<script src="js/classie.js"></script>
-	<script src="js/uiMorphingButton_inflow.js"></script>
-	<!-- Magnific Popup core JS file -->
-	<script src="js/jquery.magnific-popup.js"></script> 
+  </div>
 </body>
-
+<script>
+//按键触发 
+ 
+ document.onkeydown = function(){
+            //禁止 ctrl+u
+            if (event.ctrlKey && window.event.keyCode==85){
+                return false;
+            }
+            //禁止 F12
+            if (window.event && window.event.keyCode == 123) {
+                event.keyCode = 0;
+                event.returnValue = false;
+            }
+     }
+ 
+   //如果还要禁止其他键的话搜 window.event.keyCode的对照表
+ 
+ 
+//网站禁止右键
+        document.body.oncontextmenu = function() {
+            self.event.returnValue=false
+        };
+ 
+// 禁用右键菜单、复制、选择
+     $(document).bind("contextmenu copy selectstart", function() {
+            return false;
+     });
+ 
+</script>
 </html>
